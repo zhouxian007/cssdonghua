@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      height: 0;
+      box-sizing: border-box;
+    }
+    #heart {
+      margin: 100px;
+      position: relative;
+      display: inline-block;
+      animation: x 1s infinite alternate;
+    }
+    #heart > .bottom {
+      width: 50px;
+      height: 50px;
+      border: 1px solid red;
+      background: red;
+      transform: rotate(45deg);
+    }
+    #heart > .left {
+      width: 50px;
+      height: 50px;
+      border: 1px solid red;
+      background: red;
+      border-radius: 50% 50% 0 0;
+      position: absolute;
+      bottom: 100%;
+      left: 100%;
+      transform: rotate(45deg) translateY(36px);
+    }
+    #heart > .right {
+      width: 50px;
+      height: 50px;
+      border: 1px solid red;
+      background: red;
+      border-radius: 50% 0 0 50%;
+      position: absolute;
+      bottom: 100%;
+      right: 100%;
+      transform: rotate(45deg) translatex(36px);
+    }
+    @keyframes x {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(2);
+      }
+    }
+
+    #heart1 {
+      margin: 100px;
+      position: relative;
+      display: inline-block;
+      transition: all 1s;
+    }
+    #heart1 > .bottom1 {
+      width: 50px;
+      height: 50px;
+      border: 1px solid red;
+      background: red;
+      transform: rotate(45deg);
+    }
+    #heart1 > .left1 {
+      width: 50px;
+      height: 50px;
+      border: 1px solid red;
+      background: red;
+      border-radius: 50% 50% 0 0;
+      position: absolute;
+      bottom: 100%;
+      left: 100%;
+      transform: rotate(45deg) translateY(36px);
+    }
+    #heart1 > .right1 {
+      width: 50px;
+      height: 50px;
+      border: 1px solid red;
+      background: red;
+      border-radius: 50% 0 0 50%;
+      position: absolute;
+      bottom: 100%;
+      right: 100%;
+      transform: rotate(45deg) translatex(36px);
+    }
+    #heart1:hover {
+      transform: scale(2);
+    }
+  </style>
+  <body>
+    <div id="heart">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="bottom"></div>
+      <bottom id="x"></bottom>
+    </div>
+    <div id="heart1">
+      <div class="left1"></div>
+      <div class="right1"></div>
+      <div class="bottom1"></div>
+      <bottom id="x1"></bottom>
+    </div>
+  </body>
+</html>
